@@ -5,6 +5,7 @@ var path = require('path');
 module.exports = function(params, callback) {
   var assemble = params.assemble;
   var grunt    = params.grunt;
+  var target   = grunt.task.current.target;
 
   // Write target collection data (categories, pages, tags) to file.
   if(null != assemble.options.context && null != assemble.options.context.dest) {
@@ -16,8 +17,13 @@ module.exports = function(params, callback) {
       }
     }
 
+    // Assign to current context.
+    if(null == assemble.options.data[target]) {
+      assemble.options.data[target] = data;
+    }
+
     // Write to file.
-    var basename = path.join(assemble.options.context.dest, grunt.task.current.target);
+    var basename = path.join(assemble.options.context.dest, target);
     var name     = basename + '.json';
 
     grunt.log.write('Generating ' + name.cyan + ' ');
@@ -30,4 +36,4 @@ module.exports = function(params, callback) {
 };
 
 // Hook into render:post:pages.
-module.exports.options = { stage: 'render:post:pages' };
+module.exports.options = { stage: 'render:pre:pages' };

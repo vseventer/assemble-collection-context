@@ -1,6 +1,6 @@
 {
   "name"        : "assemble-collection-context",
-  "version"     : "0.1.0",
+  "version"     : "0.1.1",
   "description" : "Assemble.io plugin for sharing collection context between build targets.",
   "homepage"    : "https://github.com/vseventer/assemble-collection-context",
   "bugs"        : { "url": "https://github.com/vseventer/assemble-collection-context/issues" },
@@ -20,8 +20,8 @@
     "assemble"             : "~0.4",
     "grunt"                : "~0.4",
     "grunt-cafe-mocha"     : "~0.1",
-    "grunt-contrib-clean"  : "~0.5",
-    "grunt-contrib-jshint" : "~0.8"
+    "grunt-contrib-clean"  : "~0.6",
+    "grunt-contrib-jshint" : "~0.10"
   },
   "engines"  : { "node": ">=0.8" },
   "keywords" : [ "assemble", "assembleplugin", "assemble plugin" ]
