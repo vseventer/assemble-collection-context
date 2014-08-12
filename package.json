@@ -1,6 +1,6 @@
 {
   "name"        : "assemble-collection-context",
-  "version"     : "0.1.1",
+  "version"     : "0.1.1-snapshot",
   "description" : "Assemble.io plugin for sharing collection context between build targets.",
   "homepage"    : "https://github.com/vseventer/assemble-collection-context",
   "bugs"        : { "url": "https://github.com/vseventer/assemble-collection-context/issues" },

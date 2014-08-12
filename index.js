@@ -36,4 +36,4 @@ module.exports = function(params, callback) {
 };
 
 // Hook into render:post:pages.
-module.exports.options = { stage: 'render:pre:pages' };
+module.exports.options = { stage: 'render:post:pages' };
